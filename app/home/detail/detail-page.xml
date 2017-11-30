@@ -1,0 +1,20 @@
+<Page
+    class="page"
+    navigatingTo="onNavigatingTo"  
+    xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
+    xmlns:myDrawer="shared/my-drawer"
+    xmlns="http://www.nativescript.org/tns.xsd">
+    
+    <ActionBar class="action-bar">
+        <!-- 
+        Use the NavigationButton as a side-drawer button in Android because ActionItems are shown on the right side of the ActionBar
+        Use the ActionItem for IOS with position set to left. Using the NavigationButton as a side-drawer button in iOS is not possible, because its function is to always navigate back in the application.
+        -->
+        <NavigationButton tap="goBack" automationText="GoBack" ios.position="left" android.systemIcon="ic_menu_back" />
+        <Label class="action-bar-title" text="Detail"></Label>
+    </ActionBar>
+    <GridLayout rows="40, *" class="page-content">
+        <Button row="0" text="Go back" tap="goBack" />
+        <Label row="1" text="This is the detail page" />
+    </GridLayout>
+</Page>
